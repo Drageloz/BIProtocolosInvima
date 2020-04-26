@@ -1,6 +1,8 @@
 import pandas as pd
 from pathlib import Path
 import matplotlib.pyplot as plt
+from datetime import datetime
+from subprocess import run
 
 #Count time of execution of program
 from time import perf_counter
@@ -41,61 +43,86 @@ class convertData():
         f.write(str(vbscript.encode(encoding='utf-8').decode(encoding='utf-8')))
         f.close()
         
-    def convertExcelToCsv(self, name_origin, number_sheets, name_sheets): 
-
         # convert each sheet to csv and then read it using read_csv
+    def convertExcelToCsv(self, names_origin, names_sheets, convert=1): 
+
+        # name_origin = nombre tabla
+        # name_sheets = nombre hojas en tabla
+        #if we have already the csv converted, we can chose doesnt convert with parameter convert=1 to yes, =0 to no
+
+
         df={}
-        i=1
-        from subprocess import call
-        excel= str(self.path_data / "excel_data/{}".format(name_origin))
-        for sheet in name_sheets:
-            name_sheet = "csv_data/" + sheet + ".csv"
-            csv = str(self.path_data / name_sheet)
-            path_vbs = str(self.path_data / 'ExcelToCsv.vbs')
-            call(['cscript.exe', path_vbs, excel, csv, str(i)])
-            df[sheet]=pd.read_csv(csv)
-            i+=1
-        return(df)
-
-
-
-
+        if(convert==1):
+            for name_origin, name_sheets in zip(names_origin, names_sheets):
+                i=1
+                excel= str(self.path_data / "excel_data/{}".format(name_origin))
+                for sheet in name_sheets:
+                    path_sheet = "csv_data/" + sheet + ".csv"
+                    csv = str(self.path_data / path_sheet)
+                    path_vbs = str(self.path_data / 'ExcelToCsv.vbs')
+                    run(['cscript.exe', path_vbs, excel, csv, str(i)])
+                    df[sheet]=pd.read_csv(csv, encoding="ISO-8859-1")
+                    i+=1
+            return(df)
+        else:
+            for name_origin, name_sheets in zip(names_origin, names_sheets):
+                i=1
+                for sheet in name_sheets:
+                    path_sheet = "csv_data/" + sheet + ".csv"
+                    csv = str(self.path_data / path_sheet)
+                    df[sheet]=pd.read_csv(csv, encoding="ISO-8859-1")
+            return(df)
 
 # Start the stopwatch / counter 
 t1_start = perf_counter()
 
+
+#Principal path where is the proyect data
 data_path = Path('C:/Users/andre/OneDrive/Heinsohn Proyects/Invima BI/data')
-principal_tables = {'name': 'Tablas2.xlsx', 'number_sheets': 2, 'name_sheets':['FASES', 'H_PROTOCOLOS']}
-documents_tables = {'name': 'Tablas.xlsx', 'number_sheets': 6, 'name_sheets':['DOCUMENTOS', 'COMITE_ETICA', 'SUMINISTROS_IMPORTADOS', 'CONSENTIMIENTO_INFORMADO', 'ENMIENDAS', 'MANUAL_INVESTIGADOR']}
-protocols_tables = {'name': 'DataPacientes.xlsx', 'number_sheets': 7, 'name_sheets':['PACIENTES', 'INSTITUCIONES', 'INVESTIGADORES', 'SUSPENDER_INVESTIGACION', 'DISPOSITIVOS_BIOMEDICOS', 'MEDICAMENTOS', 'PROTOCOLOS']}
 
+#tables information, names of tables and name of sheets in tables
+tables = {'names': ['Tablas2.xlsx', 'Tablas.xlsx', 'DataPacientes.xlsx'],
+         'names_sheets':[['FASES', 'H_PROTOCOLOS'],
+                         ['DOCUMENTOS', 'COMITE_ETICA', 'SUMINISTROS_IMPORTADOS', 'CONSENTIMIENTO_INFORMADO', 'ENMIENDAS', 'MANUAL_INVESTIGADOR'],
+                         ['PACIENTES', 'INSTITUCIONES', 'INVESTIGADORES', 'SUSPENDER_INVESTIGACION', 'DISPOSITIVOS_BIOMEDICOS', 'MEDICAMENTOS', 'PROTOCOLOS']]}
+
+
+
+#use class convert to prepare convertion from xlsx to csv
 convert = convertData(data_path)
+
+#Create the VBS file that convert files
 convert.createVbs()
-df = convert.convertExcelToCsv(principal_tables['name'],
-                 principal_tables['number_sheets'],
-                 principal_tables['name_sheets'])
 
-fases = pd.read_csv(data_path / 'csv_data/FASES.csv') 
+#Create a DataFrame that contains all the tables converted before
+df = convert.convertExcelToCsv(tables['names'],
+                 tables['names_sheets'], convert=0)
+#assigne corresponding dataframes to a variable
+fases = df['FASES']
+h_protocolos = df['H_PROTOCOLOS']
+documentos = df['DOCUMENTOS']
+pacientes = df['PACIENTES']
+instituciones = df['INSTITUCIONES']
+investigadores = df['INVESTIGADORES']
+suspender_investigacion = df['SUSPENDER_INVESTIGACION']
+protocolos = df['PROTOCOLOS']
 
-h_protocolos = pd.read_csv(data_path / 'csv_data/H_PROTOCOLOS.csv')
+#you can explore the dataframe to know better about informacion, this space is to do that:
+##############################################################################################################
+#Lets see some satistical values, select with number 1 to 7 the dataframe
+#yo can select the dataFrame you want to see, fases, h_protocolos, documentos, etc
 
-#documentos = pd.read_excel(data_path / documents_tables, sheet_name=0, read_only=True)
+protocolos.info()
 
-#pacientes = pd.read_excel(data_path / protocols_tables, sheet_name=0, read_only=True)
-
-#instituciones = pd.read_excel(data_path / protocols_tables, sheet_name=1, read_only=True)
-
-#investigadores = pd.read_excel(data_path / protocols_tables, sheet_name=2, read_only=True)
-
-#suspender_investigacion = pd.read_excel(data_path / protocols_tables, sheet_name=3, read_only=True)
-
-#protocolos = pd.read_excel(data_path / protocols_tables, sheet_name=6, read_only=True)
+#plot values in a DataFrame specific, in 'protocolos' you can plot 'CODIGOINVIMA' and 'ESTADO' for example
 
 
-##adding new columns that make useful data
 
-#documentos['TIEMPO_ESTUDIO_DOCUMENTOS'] = documentos.FECHA_RESPUESTA - documentos.FECHA_PRESENTACION
+#protocolos[protocolos['ESTADO']=='APROBADO']['VERSION'].hist()
+plt.show()
 
+###############################################################################################################
+#finished the area to exploration the DataFrame
 # Stop the stopwatch / counter 
 t1_stop = perf_counter() 
 

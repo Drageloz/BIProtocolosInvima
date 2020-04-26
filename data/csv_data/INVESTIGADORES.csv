@@ -1,0 +1,100 @@
+ID_INVESTIGADOR,NOMBRE APELLIDOS,NME_GENERO_PR,NME_CLASIFICACION_PR,TIEMPO_INVESTIGACION,FORMACION_ACADEMICA
+1,INVESTIGADOR 1,Masculino,Investigador Sénior,21,Doctorado
+2,INVESTIGADOR 2,Masculino,Investigador Asociado,12,Doctorado
+3,INVESTIGADOR 3,Masculino,Investigador Junior,16,Doctorado
+4,INVESTIGADOR 4,Masculino,Investigador Sénior,20,Doctorado
+5,INVESTIGADOR 5,Masculino,Investigador Asociado,14,Maestría/Magister
+6,INVESTIGADOR 6,Masculino,Investigador Junior,11,Maestría/Magister
+7,INVESTIGADOR 7,Femenino,Investigador Sénior,12,Maestría/Magister
+8,INVESTIGADOR 8,Masculino,Investigador Junior,12,Doctorado
+9,INVESTIGADOR 9,Femenino,Investigador Asociado,12,Maestría/Magister
+10,INVESTIGADOR 10,Femenino,Investigador Junior,10,Maestría/Magister
+11,INVESTIGADOR 11,Masculino,Investigador Junior,13,Doctorado
+12,INVESTIGADOR 12,Masculino,Investigador Junior,15,Doctorado
+13,INVESTIGADOR 13,Femenino,Investigador Asociado,18,Maestría/Magister
+14,INVESTIGADOR 14,Masculino,Investigador Asociado,11,Maestría/Magister
+15,INVESTIGADOR 15,Masculino,Investigador Asociado,20,Maestría/Magister
+16,INVESTIGADOR 16,Masculino,Investigador Junior,12,Especialidad Médica
+17,INVESTIGADOR 17,Masculino,Investigador Asociado,14,Maestría/Magister
+18,INVESTIGADOR 18,Femenino,Investigador Sénior,18,Doctorado
+19,INVESTIGADOR 19,Masculino,Investigador Junior,15,Maestría/Magister
+20,INVESTIGADOR 20,Femenino,Investigador Asociado,17,Doctorado
+21,INVESTIGADOR 21,Masculino,Investigador Junior,12,Maestría/Magister
+22,INVESTIGADOR 22,Masculino,Investigador Asociado,13,Maestría/Magister
+23,INVESTIGADOR 23,Masculino,Investigador Asociado,21,Maestría/Magister
+24,INVESTIGADOR 24,Masculino,Investigador Junior,11,Maestría/Magister
+25,INVESTIGADOR 25,Masculino,Investigador Sénior,17,Doctorado
+26,INVESTIGADOR 26,Femenino,Investigador Asociado,24,Maestría/Magister
+27,INVESTIGADOR 27,Femenino,Investigador Junior,12,Maestría/Magister
+28,INVESTIGADOR 28,Masculino,Investigador Asociado,13,Doctorado
+29,INVESTIGADOR 29,Masculino,Investigador Sénior,18,Postdoctorado/Estancia postdoctoral
+30,INVESTIGADOR 30,Masculino,Investigador Junior,15,Postdoctorado/Estancia postdoctoral
+31,INVESTIGADOR 31,Femenino,Investigador Junior,15,Maestría/Magister
+32,INVESTIGADOR 32,Masculino,Investigador Junior,15,Doctorado
+33,INVESTIGADOR 33,Masculino,Investigador Junior,20,Maestría/Magister
+34,INVESTIGADOR 34,Masculino,Investigador Junior,12,Especialidad Médica
+35,INVESTIGADOR 35,Masculino,Investigador Asociado,16,Especialización
+36,INVESTIGADOR 36,Masculino,Investigador Asociado,11,Maestría/Magister
+37,INVESTIGADOR 37,Masculino,Investigador Asociado,15,Maestría/Magister
+38,INVESTIGADOR 38,Femenino,Investigador Asociado,21,Doctorado
+39,INVESTIGADOR 39,Masculino,Investigador Junior,13,Especialización
+40,INVESTIGADOR 40,Femenino,Investigador Sénior,19,Doctorado
+41,INVESTIGADOR 41,Femenino,Investigador Junior,14,Doctorado
+42,INVESTIGADOR 42,Femenino,Investigador Asociado,21,Maestría/Magister
+43,INVESTIGADOR 43,Masculino,Investigador Junior,15,Maestría/Magister
+44,INVESTIGADOR 44,Masculino,Investigador Asociado,11,Doctorado
+45,INVESTIGADOR 45,Masculino,Investigador Asociado,12,Maestría/Magister
+46,INVESTIGADOR 46,Femenino,Investigador Junior,21,Maestría/Magister
+47,INVESTIGADOR 47,Masculino,Investigador Junior,11,Doctorado
+48,INVESTIGADOR 48,Femenino,Investigador Junior,13,Doctorado
+49,INVESTIGADOR 49,Femenino,Investigador Junior,11,Maestría/Magister
+50,INVESTIGADOR 50,Masculino,Investigador Sénior,15,Doctorado
+51,INVESTIGADOR 51,Masculino,Investigador Asociado,18,Doctorado
+52,INVESTIGADOR 52,Femenino,Investigador Sénior,14,Doctorado
+53,INVESTIGADOR 53,Masculino,Investigador Asociado,18,Doctorado
+54,INVESTIGADOR 54,Femenino,Investigador Sénior,16,Maestría/Magister
+55,INVESTIGADOR 55,Femenino,Investigador Asociado,12,Doctorado
+56,INVESTIGADOR 56,Masculino,Investigador Junior,11,Doctorado
+57,INVESTIGADOR 57,Masculino,Investigador Sénior,13,Postdoctorado/Estancia postdoctoral
+58,INVESTIGADOR 58,Femenino,Investigador Junior,12,Maestría/Magister
+59,INVESTIGADOR 59,Masculino,Investigador Asociado,10,Maestría/Magister
+60,INVESTIGADOR 60,Femenino,Investigador Junior,18,Maestría/Magister
+61,INVESTIGADOR 61,Masculino,Investigador Asociado,13,Doctorado
+62,INVESTIGADOR 62,Femenino,Investigador Junior,17,Doctorado
+63,INVESTIGADOR 63,Masculino,Investigador Asociado,19,Doctorado
+64,INVESTIGADOR 64,Femenino,Investigador Junior,19,Doctorado
+65,INVESTIGADOR 65,Masculino,Investigador Asociado,22,Maestría/Magister
+66,INVESTIGADOR 66,Femenino,Investigador Junior,17,Doctorado
+67,INVESTIGADOR 67,Masculino,Investigador Junior,15,Doctorado
+68,INVESTIGADOR 68,Femenino,Investigador Junior,15,Pregrado/Universitario
+69,INVESTIGADOR 69,Masculino,Investigador Junior,14,Maestría/Magister
+70,INVESTIGADOR 70,Femenino,Investigador Junior,18,Doctorado
+71,INVESTIGADOR 71,Femenino,Investigador Junior,11,Maestría/Magister
+72,INVESTIGADOR 72,Masculino,Investigador Junior,13,Doctorado
+73,INVESTIGADOR 73,Masculino,Investigador Junior,16,Doctorado
+74,INVESTIGADOR 74,Femenino,Investigador Asociado,19,Doctorado
+75,INVESTIGADOR 75,Femenino,Investigador Asociado,15,Maestría/Magister
+76,INVESTIGADOR 76,Femenino,Investigador Sénior,14,Doctorado
+77,INVESTIGADOR 77,Femenino,Investigador Junior,13,Doctorado
+78,INVESTIGADOR 78,Masculino,Investigador Junior,18,Doctorado
+79,INVESTIGADOR 79,Masculino,Investigador Asociado,16,Doctorado
+80,INVESTIGADOR 80,Masculino,Investigador Asociado,13,Maestría/Magister
+81,INVESTIGADOR 81,Femenino,Investigador Junior,14,Doctorado
+82,INVESTIGADOR 82,Masculino,Investigador Junior,15,Pregrado/Universitario
+83,INVESTIGADOR 83,Femenino,Investigador Asociado,16,Maestría/Magister
+84,INVESTIGADOR 84,Masculino,Investigador Junior,16,Doctorado
+85,INVESTIGADOR 85,Masculino,Investigador Sénior,20,Doctorado
+86,INVESTIGADOR 86,Masculino,Investigador Asociado,14,Maestría/Magister
+87,INVESTIGADOR 87,Masculino,Investigador Junior,12,Doctorado
+88,INVESTIGADOR 88,Masculino,Investigador Sénior,16,Postdoctorado/Estancia postdoctoral
+89,INVESTIGADOR 89,Masculino,Investigador Junior,11,Doctorado
+90,INVESTIGADOR 90,Masculino,Investigador Asociado,11,Maestría/Magister
+91,INVESTIGADOR 91,Femenino,Investigador Asociado,17,Doctorado
+92,INVESTIGADOR 92,Masculino,Investigador Junior,13,Postdoctorado/Estancia postdoctoral
+93,INVESTIGADOR 93,Femenino,Investigador Junior,17,Postdoctorado/Estancia postdoctoral
+94,INVESTIGADOR 94,Femenino,Investigador Junior,17,Maestría/Magister
+95,INVESTIGADOR 95,Masculino,Investigador Asociado,13,Maestría/Magister
+96,INVESTIGADOR 96,Masculino,Investigador Junior,13,Doctorado
+97,INVESTIGADOR 97,Masculino,Investigador Asociado,13,Doctorado
+98,INVESTIGADOR 98,Masculino,Investigador Sénior,14,Postdoctorado/Estancia postdoctoral
+99,INVESTIGADOR 99,Femenino,Investigador Asociado,16,Doctorado
