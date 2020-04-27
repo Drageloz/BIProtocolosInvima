@@ -112,14 +112,14 @@ protocolos = df['PROTOCOLOS']
 #Lets see some satistical values, select with number 1 to 7 the dataframe
 #yo can select the dataFrame you want to see, fases, h_protocolos, documentos, etc
 
-protocolos.info()
+#protocolos.info()
 
 #plot values in a DataFrame specific, in 'protocolos' you can plot 'CODIGOINVIMA' and 'ESTADO' for example
 
 
 
 #protocolos[protocolos['ESTADO']=='APROBADO']['VERSION'].hist()
-plt.show()
+#plt.show()
 
 ###############################################################################################################
 #finished the area to exploration the DataFrame
