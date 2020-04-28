@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class tiempoProtocolosConfig(AppConfig):
+class TiempoprotocolosConfig(AppConfig):
     name = 'tiempoProtocolos'
