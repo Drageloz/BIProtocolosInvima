@@ -22,6 +22,7 @@
     <link href="/static/plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
     <link href="/static/assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 </head>
 
@@ -54,10 +55,12 @@
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->
-        {% block content%} {% endblock %}
-        <!-- {% include 'partials/_contentArea.html' %} !-->
+        {% include 'partials/_contentArea.html' %}
         <!--  END CONTENT AREA  -->
-
+        {% block content%} {% endblock %} {% block content1%} {% endblock %}
+    </div>
+    </div>
+    </div>
     </div>
     <!-- END MAIN CONTAINER -->
 
